@@ -13,6 +13,8 @@
     </style>
 </head>
 <body>
+<th:block th:replace="~{/layout/basic :: setContent(~{this::content})}">
+    <th:block th:fragment="content">
 <h1 th:text="#{content.title}">Helo page</h1>
 <table>
     <form method="post" action="/" th:object="${formModel}">
@@ -39,5 +41,7 @@
         <td><a th:href="@{/delete/{id}(id=${obj.id})}">x</a> </td>
     </tr>
 </table>
+    </th:block>
+</th:block>
 </body>
 </html>
