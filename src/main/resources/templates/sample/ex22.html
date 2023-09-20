@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${test}"></p>
+<ul>
+    <li th:each="dto, varstatus : ${list}">
+        [[${varstatus.index}]] --- [[${dto}]]
+    </li>
+</ul>
+</body>
+</html>

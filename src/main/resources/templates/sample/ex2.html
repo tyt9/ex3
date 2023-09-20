@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p th:text="${test}"></p>
+<table border="1">
+<tr th:each="dto : ${list}">
+    <td>번호:
+        [[${dto.sno}]]
+    </td>
+    <td th:text="${dto.first}"></td>
+    <td th:text="${dto.last}"></td>
+    <td th:text="${dto.regTime}"></td>
+</tr>
+</table>
+</body>
+</html>
